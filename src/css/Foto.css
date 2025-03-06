@@ -1,8 +1,14 @@
+@media only screen and (max-width: 800px) {
+  .Fotos {
+    grid-template-columns: auto auto auto !important;
+  }
+}
+
 .Fotos {
   margin: 1%;
   text-align: center;
   display: inline-grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto;
 }
 
 .FotosContent {
