@@ -4,11 +4,6 @@ body {
   color: #fff;
   min-height: 100vh;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to bottom, #001F3F, #0056b3, #008cdd, #000000);
-  background-size: 100% 400%;
-  animation: gradientFade 50s ease infinite;
-  margin: 0;
-  padding: 0;
 }
 main {
   min-height: 78.5vh;
@@ -16,17 +11,6 @@ main {
 footer {
   color: black;
 }
-@keyframes gradientFade {
-  0% {
-      background-position: 0% 0%;
-  }
-  50% {
-      background-position: 0% 100%;
-  }
-  100% {
-      background-position: 0% 0%;
-  }
-} 
 
 /* Foto-container */
 .Fotos {
