@@ -9,6 +9,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 @keyframes gradientFade {
     0% {
         background-position: 0% 0%;
@@ -20,8 +21,8 @@ body {
         background-position: 0% 0%;
     }
 }
-html
-{
+
+html {
     min-height: 100vh;
 }
 
@@ -31,7 +32,7 @@ html
     font-family: 'montserrat';
     font-size: 1.2rem;
     background-color: rgb(0, 0, 0, 0.5);
-    border-radius: 30px;
+    border-radius: 5px;
     margin: 200px;
 }
 
@@ -39,7 +40,6 @@ html
     font-size: 2rem;
     color: white;
 }
-
 
 .about h2 {
     font-size: 20pt;
@@ -72,8 +72,7 @@ html
     margin-left: 40px;
 }
 
-.about a
-{
+.about a {
     color: white;
     text-decoration: underline;
     font-weight: bold;
@@ -95,4 +94,123 @@ html, body {
 
 body {
     justify-content: space-between;
+}
+
+/* ✅ Media query voor schermen kleiner dan 600px */
+@media screen and (max-width: 600px) {
+    .parallax {
+        background-position:left !important;
+    }
+    .about {
+        
+        margin: 20px 10px;
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .about header {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .about h2 {
+        font-size: 1.2rem;
+    }
+
+    .about section {
+        padding: 10px;
+    }
+
+    .about aside {
+        position: relative;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 10px;
+        margin-top: 20px;
+        top: auto;
+        right: auto;
+    }
+
+    .footer {
+        font-size: 0.9rem;
+        padding: 5px;
+    }
+}
+@media screen and (max-width: 768px){
+    .parallax {
+        background-position:left !important;
+    }
+    .about {
+        
+        margin: 20px 10px;
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .about header {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .about h2 {
+        font-size: 1.2rem;
+    }
+
+    .about section {
+        padding: 10px;
+    }
+
+    .about aside {
+        position: relative;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 10px;
+        margin-top: 20px;
+        top: auto;
+        right: auto;
+    }
+
+    .footer {
+        font-size: 0.9rem;
+        padding: 5px;
+    }
+}
+@media screen and (max-width: 1440px){
+    .parallax {
+        background-position:left !important;
+    }
+    .about {
+        
+        margin: 20px 10px;
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .about header {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .about h2 {
+        font-size: 1.2rem;
+    }
+
+    .about section {
+        padding: 10px;
+    }
+
+    .about aside {
+        position: relative;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 10px;
+        margin-top: 20px;
+        top: auto;
+        right: auto;
+    }
+
+    .footer {
+        font-size: 0.9rem;
+        padding: 5px;
+    }
 }
