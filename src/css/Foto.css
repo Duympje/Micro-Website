@@ -2,19 +2,12 @@
 body {
   background: linear-gradient(135deg, #0a0a0a, #1f1f1f);
   color: #fff;
-  min-height: 100vh;
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(to bottom, #001F3F, #0056b3, #008cdd, #000000);
   background-size: 100% 400%;
   animation: gradientFade 50s ease infinite;
   margin: 0;
   padding: 0;
-}
-main {
-  min-height: 78.5vh;
-}
-footer {
-  color: black;
 }
 @keyframes gradientFade {
   0% {
@@ -26,14 +19,14 @@ footer {
   100% {
       background-position: 0% 0%;
   }
-} 
+}
 
 /* Foto-container */
 .Fotos {
   margin: 2%;
   text-align: center;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Maak de foto's groter */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
   justify-content: center;
 }
@@ -88,8 +81,8 @@ footer {
 .FotosContent section img {
   border-radius: 10px;
   width: 100%;
-  height: 100%; /* Zorg ervoor dat de hoogte gelijk is aan de container */
-  object-fit: cover; /* Zorg ervoor dat de afbeelding de container vult */
+  height: auto;
+  object-fit: cover;
   transition: transform 0.4s ease-in-out, filter 0.3s;
 }
 
