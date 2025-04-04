@@ -21,7 +21,8 @@ body {
 
 main{
     display: flex;
-    height: 1000px;
+    justify-content: center; /* Centraal op het scherm */
+    padding: 100px 20px 50px;
 }
 iframe{
     display: block;
@@ -60,6 +61,7 @@ iframe{
     justify-content: center;
     align-items: center;
     text-align: center;
+    overflow: hidden;
 }
 
 h2 {
@@ -191,3 +193,73 @@ p {
 .info-btn:hover {
     background-color: #002244;
 }
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Twee kolommen */
+    gap: 20px; /* Ruimte tussen de divs */
+    margin-top: 20px;
+}
+
+/* Standaard styling voor de vakken */
+.vak {
+    height: 300px; /* Statische hoogte voor de vakken */
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+/* Breedte div (iframe) krijgt de volledige breedte van de container */
+.vak.onderaan {
+    grid-column: span 2;  /* Span over beide kolommen */
+    height: auto;          /* Flexibele hoogte */
+    border: 2px solid red; /* Rode rand */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Styling voor de iframe binnen de breedte div */
+.iframe-wrapper {
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 verhouding voor de iframe */
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+
+  
+  
+/* Zorg ervoor dat de container groot genoeg is */
+.container {
+    width: 90%;
+    max-width: 1200px;
+}
+
+  
+  
+  
+  
