@@ -28,20 +28,97 @@
     </div>
     
     <main class="ler">
+      <div class="ai">
+        <!-- Tooltip for AI assistant -->
+        <div id="aiTooltip" class="tooltip">
+          <span class="tooltip-text">Er is een AI-assistent beschikbaar! Klik hier om te starten.</span>
+          <button class="tooltip-close" onclick="hideTooltip()">×</button>
+        </div>
+  
+        <!-- Button to open the chatbot modal -->
+        <button onclick="openModal()" class="open-button" title="Chat with Mistral AI!">
+          <img src="/src/images/ai/comment-02-stroke-rounded.svg" alt="Chat Icon" />
+        </button>
+  
+        <!-- Background overlay (covers the page) -->
+        <div id="overlay" class="overlay" onclick="closeModal()"></div>
+  
+        <!-- The Modal -->
+        <div id="chatModal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img
+              src="/src/images/ai/LOGO white.png"
+              alt="Mistral AI"
+              class="chatbot-image"
+            />
+            <h2 class="title">Chatbot</h2>
+            <div class="aiScroll">
+              <div id="chatHistory" class="chat-history"></div>
+            </div>
+            <hr />
+            <div class="flex">
+              <input
+                type="text"
+                id="userInput"
+                placeholder="Ask something..."
+                onkeydown="handleKeyPress(event)"
+                class="user-input"
+              />
+              <button
+                id="send-button"
+                onclick="sendClicked(document.getElementById('userInput').value)"
+                class="send-button"
+              >
+                Send
+              </button>
+            </div>
+          </div>
+        </div>
+  
+        <script src="/src/js/ai.js"></script>
+        <!-- Link to external JavaScript file -->
+      </div>
       <div class="container">
         <div class="tweede">
           <h2 class="titel">Wat na Applicatie- en databeheer?</h2>
           <br />
+
+          <div class="grid-container">
+            <div class="vak links-boven">
+              Na het behalen van je diploma Applicatie- en Databeheer kan je
+              verschillende richtingen uit. Je kan ervoor kiezen om verder te
+              studeren in het hoger onderwijs, bijvoorbeeld een professionele
+              bachelor Informatica, Toegepaste Informatica of Multimedia en
+              Communicatietechnologie. Daarnaast kan je ook aan de slag in het
+              bedrijfsleven, bijvoorbeeld als webdeveloper, systeembeheerder of
+              IT-consultant. Met je kennis van applicaties en databanken kan je
+              een belangrijke rol spelen in het optimaliseren van
+              bedrijfsprocessen en het ontwikkelen van softwareoplossingen.
+            </div>
+            <div class="vak rechts-boven">
+              
+            </div>
+            <div class="vak links-onder">
+              
+          </div>
+            <div class="vak rechts-onder">
+              
+            </div>
+            <div class="vak onderaan">
+              <div class="iframe-wrapper">
+                  <iframe
+                      title="2425 Wat na Dubbele finaliteit"
+                      src="https://view.genially.com/664f274c4c777a00146c3fcb"
+                      frameborder="0"
+                      allowfullscreen="true"
+                  ></iframe>
+              </div>
+          </div>
+          </div>
+
           <p class="infowatna">
-            Na het behalen van je diploma Applicatie- en Databeheer kan je
-            verschillende richtingen uit. Je kan ervoor kiezen om verder te
-            studeren in het hoger onderwijs, bijvoorbeeld een professionele
-            bachelor Informatica, Toegepaste Informatica of Multimedia en
-            Communicatietechnologie. Daarnaast kan je ook aan de slag in het
-            bedrijfsleven, bijvoorbeeld als webdeveloper, systeembeheerder of
-            IT-consultant. Met je kennis van applicaties en databanken kan je
-            een belangrijke rol spelen in het optimaliseren van
-            bedrijfsprocessen en het ontwikkelen van softwareoplossingen.
+           
           </p>
           <br />
           
@@ -54,42 +131,25 @@
                 height: 0;
               "
             >
-            <iframe
-            title="2425 Wat na Dubbele finaliteit"
-            frameborder="0"
-           
-            style="
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-            "
-            src="https://view.genially.com/664f274c4c777a00146c3fcb"
-            type="text/html"
-            allowscriptaccess="always"
-            allowfullscreen="true"
-            scrolling="yes"
-            allownetworking="all"
-          ></iframe> 
+            
           
           <div class="info-secties">
             <div class="sectie">
-                <h3>Bijdragelijst</h3>
-                <a href="bijdrage2024.pdf">5ADB bijdragelijst 2024_25.pdf</a>
-                <a href="bijdrage2025.pdf">bijdragelijst 2025-26 6ADB.pdf</a>
-            </div>
+              <h3>Bijdragelijst</h3>
+              <a href="bijdrage2024.pdf">5ADB bijdragelijst 2024_25.pdf</a>
+              <a href="bijdrage2025.pdf">bijdragelijst 2025-26 6ADB.pdf</a>
+          </div>
+          <div class="sectie">
+            <h3>Onderwijskiezer</h3>
+            <button class="info-btn">📑 Meer info 5ADB ↗</button>
+            <button class="info-btn">📑 Meer info 6ADB ↗</button>
+        </div>
+        <div class="sectie">
+          <h3>Studiefiche</h3>
+          <a href="studiefiche.pdf">Fiche Applicatie- en databeheer.pdf</a>
+      </div>
         
-            <div class="sectie">
-                <h3>Studiefiche</h3>
-                <a href="studiefiche.pdf">Fiche Applicatie- en databeheer.pdf</a>
-            </div>
-        
-            <div class="sectie">
-                <h3>Onderwijskiezer</h3>
-                <button class="info-btn">📑 Meer info 5ADB ↗</button>
-                <button class="info-btn">📑 Meer info 6ADB ↗</button>
-            </div>
+            
             
 
             <p>
@@ -110,7 +170,7 @@
         </div>
       </div>
     </main>
-    <footer>
+    <footer class="footer">
       <p>&copy; 2025 Gti Beveren. All rights reserved.</p>
       <p>
         5ADB -
